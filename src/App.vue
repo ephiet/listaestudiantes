@@ -9,10 +9,11 @@
       <input v-model="estudiante.apellido" type="text"><br>
       <button @click.prevent="agregarEstudianteNuevo">Agregar</button>
     </form>
+    
     <table class="tabla">
       <tr>
-        <th>Nombre</th>
-        <th>Apellido</th>
+        <th>Nombre:</th>
+        <th>Apellido:</th>
       </tr>
       <tr v-bind:key="estudiante.nombre" v-for="estudiante in estudiantes">
         <td>{{estudiante.nombre}}</td>
@@ -54,40 +55,33 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  color: #2c3e50;
-  margin-top: 60px;
-
-}
-h2{
-  padding: 2rem;
-  text-align: center;
-}
-.contenedor {
-  display: flex;
-  justify-content: space-around;
-}
-form{
-  text-align: start;
-  width: 50%;
-  margin: 0 2rem 0 2rem;
+  color: black;
+  margin-top: 3em;
 }
 label{
-  margin-bottom: 0;
+  margin: 0.5em;
+  font-weight: bold;
 }
+form{
+    margin: 2em;
+  width: 40%;
+}
+
 button{
-  margin-top: 1rem;
-  background-color: rgb(21, 95, 3);
+  padding: 0.4em;
+  background-color:green;
   color: white;
+  font-weight: bold;
+  margin-top: 1.5em;
 }
 input{
-  width: 80%;
+  width: 70%;
 }
 .tabla{
   width: 50%;
-  margin: 0 2rem 0 2rem;
-  
+  margin:2em;
 }
 th{
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px;
 }
 </style>
